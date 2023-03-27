@@ -1,0 +1,74 @@
+/* Style for every single product */
+.product {
+  width: 300px;
+  height: 100%;
+  border: 1px solid #95a0a7;
+  border-radius: 9px;
+  position: relative;
+}
+
+/* Product img */
+.product img {
+  margin: 8px 7px;
+  width: 286px;
+  height: 286pxb;
+  border-radius: 13px;
+  box-shadow: 1px 2px 2px rgb(190, 188, 188);
+}
+
+/* Styles for product info */
+.product-info{
+    margin: 12px 14px;
+    padding-bottom: 25px;
+}
+
+/* product name */
+.product-name {
+  height: 100px;
+  font-family: "verdana";
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 25px;
+  letter-spacing: 0.0015em;
+  color: #0e161a;
+}
+
+.product-price{
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-family: 'verdana', arial, helvetica;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: 0.0015em;
+    color: #0E161A;
+}
+
+.product-info .manufacturer{
+    margin-bottom: 5px;
+}
+
+.product-info .rating{
+    margin-bottom: 11px;
+}
+
+/* add to cart btn */
+.add-cart-btn{ 
+  box-sizing: border-box;
+  width: 100%;
+  color: #0E161A;
+  background: #FFE0B3;
+  border: 1px solid #95A0A7;
+  border-radius: 0px 0px 8px 8px;
+  position: absolute;
+  bottom: 0;
+}
+
+/* add to cart btn hover */
+.add-cart-btn:hover{
+  background: orange;
+}
