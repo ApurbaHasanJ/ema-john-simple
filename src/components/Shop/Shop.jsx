@@ -17,12 +17,30 @@ const Shop = () => {
     // add cart From Fake Data base 
     useEffect(() =>{
         const storedCart = getShoppingCart();
-        console.log(storedCart);
-    },[])
+        const savedCart = [];
+        // get id
+        for(const id in storedCart){
+            // console.log(id);
+
+            // get product by using id
+            const addedProduct = products.find(product =>product.id === id);
+
+            // get Quantity of the product
+            if(addedProduct){
+                const quantity = storedCart[id];
+                addedProduct.quantity = quantity;
+                savedCart.push(addedProduct);
+                // console.log(quantity);
+            }
+            console.log(addedProduct);
+        }
+        setCart(savedCart);
+
+    },[products])
 
     // Add to cart
     const handleAddToCart = (product) => {
-        console.log(product);
+        // console.log(product);
         const newCart = [...cart, product]
         setCart(newCart);
         addToDb(product.id)
