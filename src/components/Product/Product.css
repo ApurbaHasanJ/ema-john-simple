@@ -1,3 +1,9 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 /* Style for every single product */
 .product {
   width: 300px;
@@ -58,6 +64,10 @@
 
 /* add to cart btn */
 .add-cart-btn{ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   box-sizing: border-box;
   width: 100%;
   color: #0E161A;
@@ -70,5 +80,6 @@
 
 /* add to cart btn hover */
 .add-cart-btn:hover{
+  border: 2px solid #95A0A7;
   background: orange;
 }
