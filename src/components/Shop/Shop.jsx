@@ -58,8 +58,8 @@ const Shop = () => {
     }
 
     return (
-        <div className='shop-container max-w-6xl mx-auto'>
-            <div className="products-container gap-2">
+        <div className='shop-container lg:ml-40'>
+            <div className="products-container">
                 {
                     products.map(product => <Product 
                         key={product.id}
