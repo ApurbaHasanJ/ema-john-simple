@@ -6,8 +6,8 @@
 
 /* Products container */
 .products-container{
-    margin: 80px;
+    margin-top: 120px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 45px;
+    /* gap: 45px; */
 }
