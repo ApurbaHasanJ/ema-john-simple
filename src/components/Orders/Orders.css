@@ -1,0 +1,14 @@
+/* Shop Container */
+.orders-container{
+    margin-top: 110px;
+    /* display: grid; */
+    /* grid-template-columns: 4fr 1fr; */
+}
+
+/* Products container */
+/* .cart-products{ */
+    /* margin: 80px; */
+    /* display: grid; */
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* gap: 45px; */
+/* } */

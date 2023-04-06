@@ -32,7 +32,7 @@ const Shop = () => {
                 savedCart.push(addedProduct);
                 // console.log(quantity);
             }
-            console.log(addedProduct);
+            // console.log(addedProduct);
         }
         setCart(savedCart);
 
@@ -58,7 +58,7 @@ const Shop = () => {
     }
 
     return (
-        <div className='shop-container lg:ml-40'>
+        <div className='shop-container max-w-7xl mx-auto md:py-5 lg:py-1 md:gap-2 lg:gap-3'>
             <div className="products-container">
                 {
                     products.map(product => <Product 

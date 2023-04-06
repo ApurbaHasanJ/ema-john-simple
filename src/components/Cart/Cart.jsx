@@ -25,8 +25,7 @@ const Cart = ({cart}) => {
 
 
     return (
-        <div className='cart h-full   '>
-            <div className=' sticky top-0 p-5 '>
+        <div className='cart  fixed p-7 rounded-lg shadow-xl '>
                 <h2 className=' text-2xl text-center mb-11'>Order Summary</h2>
 
                 {/* Cart Calculations */}
@@ -40,17 +39,16 @@ const Cart = ({cart}) => {
 
                 {/* cart btn */}
                 <div className='flex flex-col'>
-                    <button className='bg-error text-white flex gap-3 justify-center items-center mb-4'>
+                    <button className='bg-error p-2 rounded-md text-white flex gap-3 justify-center items-center mb-4'>
                         <p>Clear Cart</p>  
                         <FontAwesomeIcon icon={faTrashCan} />
                     </button>
-                    <button className='bg-primary text-white flex gap-3 justify-center items-center'>
+                    <button className='bg-primary p-2 rounded-md text-white flex gap-3 justify-center items-center'>
                         <p>Review Order</p>  
                         <FontAwesomeIcon icon={faRightLong} />
                     </button>
                 </div>
             </div>
-        </div>
     );
 };
 
