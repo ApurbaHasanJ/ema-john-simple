@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { addToDb, getShoppingCart } from '../../utilities/fakedb';
+import { addToDb, deleteShoppingCart, getShoppingCart } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRightLong } from '@fortawesome/free-solid-svg-icons';
 
 const Shop = () => {
     const [products, setProducts] = useState([]);
@@ -57,6 +60,10 @@ const Shop = () => {
         addToDb(product.id)
     }
 
+    const handleClearCart = () =>{
+        setCart([]);
+        deleteShoppingCart();
+    }
     return (
         <div className='shop-container max-w-7xl mx-auto md:py-5 lg:py-1 md:gap-2 lg:gap-3'>
             <div className="products-container">
@@ -69,7 +76,17 @@ const Shop = () => {
                 }
             </div>
             <div className="cart-container">
-                <Cart cart={cart}></Cart>
+                <Cart 
+                cart={cart}
+                handleClearCart={handleClearCart}
+                >
+                    <Link to='/orders'>
+                    <button className='bg-primary w-full p-2 px-3 rounded-md text-white flex gap-3 justify-center items-center'>
+                        <p className='mr-auto'>Review Order</p>  
+                        <FontAwesomeIcon className='pr-2'  icon={faRightLong} />
+                    </button>
+                    </Link>
+                </Cart>
             </div>
         </div>
     );

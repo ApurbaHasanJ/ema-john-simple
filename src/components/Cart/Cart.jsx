@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRightLong, faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import './Cart.css'
 
-const Cart = ({cart}) => {
+const Cart = ({cart, handleClearCart, children}) => {
 
     // Calculations for cart
     let totalPrice = 0;
@@ -25,7 +25,7 @@ const Cart = ({cart}) => {
 
 
     return (
-        <div className='cart  fixed p-7 rounded-lg shadow-xl '>
+        <div className='cart w-72  fixed p-7 rounded-lg shadow-xl '>
                 <h2 className=' text-2xl text-center mb-11'>Order Summary</h2>
 
                 {/* Cart Calculations */}
@@ -39,14 +39,12 @@ const Cart = ({cart}) => {
 
                 {/* cart btn */}
                 <div className='flex flex-col'>
-                    <button className='bg-error p-2 rounded-md text-white flex gap-3 justify-center items-center mb-4'>
-                        <p>Clear Cart</p>  
-                        <FontAwesomeIcon icon={faTrashCan} />
+                    <button onClick={handleClearCart} className='bg-error p-2 px-3 rounded-md text-white flex gap-3 justify-center items-center mb-4'>
+                        <p className='mr-auto'>Clear Cart</p>  
+                        <FontAwesomeIcon className='pr-2' icon={faTrashAlt} />
                     </button>
-                    <button className='bg-primary p-2 rounded-md text-white flex gap-3 justify-center items-center'>
-                        <p>Review Order</p>  
-                        <FontAwesomeIcon icon={faRightLong} />
-                    </button>
+                    {children}
+                    
                 </div>
             </div>
     );
